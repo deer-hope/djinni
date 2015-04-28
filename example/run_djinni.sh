@@ -22,9 +22,9 @@ in="$base_dir/example.djinni"
 cpp_out="$base_dir/generated-src/cpp"
 jni_out="$base_dir/generated-src/jni"
 objc_out="$base_dir/generated-src/objc"
-java_out="$base_dir/generated-src/java/com/dropbox/textsort"
+java_out="$base_dir/generated-src/java/com/taobao/taobao/appmonitor"
 
-java_package="com.dropbox.textsort"
+java_package="com.taobao.taobao.appmonitor"
 
 gen_stamp="$temp_out/gen.stamp"
 
@@ -53,18 +53,18 @@ fi
 $base_dir/../src/run-assume-built \
     --java-out "$temp_out/java" \
     --java-package $java_package \
-    --ident-java-field mFooBar \
+    --ident-java-field mAppM \
     \
     --cpp-out "$temp_out/cpp" \
     --cpp-namespace textsort \
-    --ident-cpp-enum-type foo_bar \
+    --ident-cpp-enum-type AppM \
     \
     --jni-out "$temp_out/jni" \
-    --ident-jni-class NativeFooBar \
-    --ident-jni-file NativeFooBar \
+    --ident-jni-class NativeAppM \
+    --ident-jni-file NativeAppM \
     \
     --objc-out "$temp_out/objc" \
-    --objc-type-prefix TXS \
+    --objc-type-prefix APPM \
     \
     --idl "$in"
 
